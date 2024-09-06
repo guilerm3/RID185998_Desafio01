@@ -11,7 +11,7 @@ body{
 img{
     border-radius: 0.625rem;
 }
-header{
+.cor-padrao{
     background-color: #02A28F;
 }
 header > h1{
@@ -37,7 +37,31 @@ header > h1{
     margin: 0 0 0 1rem;
     font-weight: 300;
 }
-.posts-populares{
-    display: flex;
-    align-items: flex-start;
+.presentation-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.posts-populares {
+    margin: 3.125rem 23rem 0 1.5rem;
+}
+.posts-populares >h2 {
+    margin: 0;
+    font-size:1.25rem ;
+    padding: 0.75rem 10.5rem 0.75rem 1.5rem;
+    text-align:left;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.posts-item{
+    margin: 0.9rem 0 0 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+.txt-posts{
+    padding: 0.81rem 0 0 0.75rem;
+    vertical-align: top;
+    width: 100%;
+}
+.posts-item img{
+    margin: 0.81rem 0 0.6rem 0.75rem;
 }
