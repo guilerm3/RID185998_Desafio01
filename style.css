@@ -70,7 +70,11 @@ header > h1{
     margin: 0.81rem 0 0.6rem 0.75rem;
 }
 /************************************************/
-main > h1 {
+.container-flex{
+    display: flex;
+    justify-content: flex-start;
+}
+.h1-posts{
     width: 45.0rem;
     white-space: nowrap;
     margin: 1.5rem 0 0 9.5rem;
@@ -81,13 +85,13 @@ main > h1 {
     justify-content: space-between;
     align-items: center;
 }
-main > h1 > p {
+.h1-posts > p {
     font-weight: 500;
     margin: 0 1.5rem 0 0;
     font-size: 0.8rem;
     text-decoration: underline;
 }
-.posts-mais-recentes{
+.grid-itens{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin-left: 9.5rem;
@@ -114,12 +118,60 @@ main > h1 > p {
 }
 /************************************************/
 .categorias{
-    width: 26.4rem;
+    display: flex;
+    flex-direction: column;
+}
+.categorias >h1{
+    padding: 0 0 0 1.5rem;
+    margin: 1.5rem 0 0 0;
+    width: 26.474375rem;
+    height: 3.0275rem;
+    white-space: nowrap;
+    font-size: 1.25rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.texto-categorias p{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.875rem 0 0.875rem 0;
 }
 /************************************************/
 footer{
     font-size: 0.8rem;
     text-align: center;
     padding: 1rem;
-    margin-top: 4rem;
+    margin: 4rem 0 0 0;
+}
+/************************************************/
+
+@media only screen and (max-width: 768px) {
+    .main-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .posts-populares {
+        order: 2;
+        margin: 0; /* Ajuste a margem conforme necessário */
+    }
+
+    .container-flex {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        order: 3;
+    }
+
+    .grid-itens {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        width: 100%; 
+    }
 }
