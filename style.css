@@ -46,8 +46,11 @@ header > h1{
 }
 /************************************************/
 .posts-populares {
-    flex: 100;
-    margin: 3.125rem 30rem 0 0;
+    position: absolute;
+    top: 7.1rem;
+    left: 57.7rem;
+    bottom: 20rem;
+    width: 27.9rem;
 }
 .posts-populares >h1 {
     white-space: nowrap;
@@ -155,7 +158,7 @@ footer{
 
     .posts-populares {
         order: 2;
-        margin: 0; /* Ajuste a margem conforme necessário */
+
     }
 
     .container-flex {
