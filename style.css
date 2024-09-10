@@ -18,17 +18,19 @@ header > h1{
 }
 /************************************************/
 .image-container {
-    position: relative;
+    display: flex;
+    align-items:end;
+    width: 46.5rem;
+    height: 24.75rem;
+    background-image: url(assets/cidade.png);
+    background-size: cover;
+    background-position: center;
+    text-align: left;
     margin:3.1rem 0 0 9.75rem;
-}
-.image-container img{
     border-radius: 0.625rem;
 }
 .text-img {
-    position: absolute;
-    top: 19rem;
-    left: 0;
-    z-index: 1;
+    margin-bottom: 1.5rem;
     color: white;
 }
 .text-img >h1{
@@ -38,18 +40,11 @@ header > h1{
     margin: 0 0 0 1rem;
     font-weight: 300;
 }
-.presentation-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1.5rem;
-}
 /************************************************/
 .posts-populares {
     position: absolute;
-    top: 7.1rem;
-    left: 57.7rem;
-    bottom: 20rem;
+    top: 7rem;
+    left: 57.5rem;
     width: 27.9rem;
 }
 .posts-populares >h1 {
@@ -150,31 +145,54 @@ footer{
 }
 /************************************************/
 
-@media only screen and (max-width: 768px) {
-    .main-content {
+@media only screen and (max-width: 400px) {
+
+    .container-flex{
         display: flex;
         flex-direction: column;
-    }
-
-    .posts-populares {
         order: 2;
-
     }
-
-    .container-flex {
-        order: 1;
-        display: flex;
-        flex-direction: column;
+    .posts-populares{
+        position:relative;
+        left: 0.5rem;
+        top: 1rem;
+        width: 23rem;
     }
-
-    footer {
-        order: 3;
-    }
-
     .grid-itens {
         display: grid;
         grid-template-columns: 1fr;
-        margin-left: 0;
+        margin-left: 0.5rem;
         width: 100%; 
+    }
+    .image-container {
+        width: 100%;
+        margin: 0.5rem;
+    }
+    .h1-posts {
+        margin: 0.5rem;
+    }
+    .categorias{
+        margin-left:0.5rem;
+        width: 23rem;
+    }
+    h1{
+        padding: 10px;
+    }
+    .image-container{
+        object-fit: cover;
+        background-size: cover;
+    }
+    header >h1{
+        padding: 1.28rem 0 1.28rem 0;
+        text-align: center;
+    }
+    .h1-posts{
+        width:21rem;
+    }
+    .categorias > h1{
+        width: 21.5rem;
+    }
+    .texto-categorias{
+        width: 23rem;
     }
 }
